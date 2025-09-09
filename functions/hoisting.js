@@ -1,5 +1,5 @@
-// you can call the function before it is declared in the code
-sayHi();
+
+sayHi();  // calling function before declaring it.
 function sayHi() {
-  console.log('Hi!');
+    console.log(`haiii `);
 }
