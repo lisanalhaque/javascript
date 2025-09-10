@@ -1,0 +1,2 @@
+the spread operator(...) in JS is yoused to spread out the elements of sn array or the porperties of an object.
+used to coppy exactly also to copy exactly the prperties from an object
