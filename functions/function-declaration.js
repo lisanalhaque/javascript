@@ -14,4 +14,4 @@ function greet(name) {  //parameter (we don't know the name)
     console.log(`Hello ` + name + ` !`);
     
 }
-greet(`Saran Anil V P`);  //argument  (name is Saran Anil V P).
+greet(`Lisan op`);  //argument  (name is Lisan op).
