@@ -1,0 +1,2 @@
+- text conent, inner text,inner HTml are properties
+  used to access or change the contents inside an element.

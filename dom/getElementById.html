@@ -1,0 +1,21 @@
+<!-- Get the element by id is a common way to access a specific element in the DOM in JavaScript. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 id="mainheading">melcow!</h1>
+    <button onclick="changeHeading()">Change Heading</button>
+    <script>
+        function changeHeading() {
+            //use getElementById to access the 
+            const heading = document.getElementById("mainheading");
+            heading.textContent = "yyyyyeaaahhhhhhhh!!! clicked the button";
+        }
+
+    </script>
+ </body>
+ </html>

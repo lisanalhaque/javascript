@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">Hello </div>
+    <div class="content">Hello 1</div>
+    <div class="content">Hello 2</div>
+    <div class="content1">Hello 3</div>
+<script>
+    const contents = document.getElementsByClassName("content");
+    console.log('content:', contents);
+    for(let i=0; i<contents.length; i++) {
+        contents[i].style.color = 'blue';
+    }
+    
+</script>
+</body>
+</html>

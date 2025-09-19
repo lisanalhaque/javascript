@@ -1,0 +1,25 @@
+<!-- select all elements with a specific tag name -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <p>oooooo</p>
+    <p>pppppp</p>
+    <p>qqqqqq</p>
+    <h4>ooooooyeaaahhh</h4>
+
+    <script>
+        const paragraphs = document.getElementsByTagName("p");
+        console.log(paragraphs);
+        for(let i=0; i<paragraphs.length; i++) {
+            paragraphs[i].style.color = 'green'; 
+
+        }
+    </script>
+
+ </body>
+ </html>
