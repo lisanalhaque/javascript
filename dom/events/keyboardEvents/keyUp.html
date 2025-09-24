@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>key down</title>
+    <title>key up</title>
 </head>
 <body>
     <h2>Inline Event Handling</h2>
     <p id="output"></p>
 
     <script>
-        document.addEventListener("keydown", (event) => {
-            document.getElementById("output").innerText = `Key down: ${event.key}`;
-    
+        document.addEventListener("keyup", (event) => {
+            document.getElementById("output").innerText = `Key up: ${event.key}`;
+
         });
     </script>
     

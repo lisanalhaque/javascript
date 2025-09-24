@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" placeholder="Enter text" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p id="output"></p>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            output.innerText = 'Form submitted successfully!';
+        });
+
+    </script>
+
+</body>
+</html>
