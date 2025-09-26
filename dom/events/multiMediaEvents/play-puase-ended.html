@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Before Unload Event</h2>
+
+    <audio id="audioPlayer" controls>
+        <source src="./background-music-409221.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <p id="eventOutPut">event will appear here</p>
+    <script>
+        const audio = document.getElementById('audioPlayer');
+        const output = document.getElementById('eventOutPut');
+
+        // Play event
+        audio.addEventListener('play', () => {
+            output.textContent = 'Audio is playing';
+            console.log('Audio is playing');
+            
+        });
+        // Pause event
+        audio.addEventListener('pause', () => {
+            output.textContent = 'Audio is paused';
+            console.log('Audio is paused');
+        });
+        //ended event
+        audio,addEventListener('end ', () => {
+              output.textContent = 'Audio has ended';
+            console.log('Audio has ended');
+        })
+    </script>
+
+</body>
+</html>
