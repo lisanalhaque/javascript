@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact page</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #9c0404, #0452a0);
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .side-by-side {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap; 
+    }
+    .map, .form-wrapper {
+      flex: 1 1 450px; 
+      min-width: 300px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+ 
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 15px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      padding: 12px;
+      background-color: #0ecb1b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #4a4b4c;
+    }
+
+  
+    .map {
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+   
+    .contact-links {
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .contact-links a, .contact-links span {
+      font-size: 15px;
+      color: #5e5f60;
+      text-decoration: none;
+    }
+
+    /* 📱 Responsive Breakpoints */
+    @media (max-width: 900px) {
+      .side-by-side {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        padding: 15px;
+      }
+      input, textarea, button {
+        font-size: 14px;
+        padding: 10px;
+      }
+      iframe {
+        height: 220px;
+      }
+      .contact-links {
+        font-size: 13px;
+      }
+    }
+    @media (max-width: 400px) {
+      .container {
+        padding: 10px;
+      }
+      h1, h2 {
+        font-size: 18px;
+      }
+      .contact-links a, .contact-links span {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="side-by-side">
+      <div class="map">
+        <h1>Our Location</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.3624545479396!2d76.17762574959872!3d10.8458962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c7000991b6ef%3A0x2cf8ab85868fc010!2sOP%20ABDUL%20LATHEEF!5e1!3m2!1sen!2sin!4v1759466092471!5m2!1sen!2sin"
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      <div class="form-wrapper">
+        <h2>CONTACT US</h2>
+        <div class="contact-links">
+            
+          <a href="https://wa.me/+917356155224"><i class="fa-brands fa-whatsapp"></i></a>
+          <span>|</span>
+          
+          <a href="tel:+917356155224"><i class="fa-solid fa-phone"></i></a>
+          <span>|</span>
+          <a href="mailto:lisanop4444@gmail.com">lisanop4444@gmail.com</a>
+        </div>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("0B5PlJmMV24ZCvSCB"); // public key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event){
+      event.preventDefault();
+      emailjs.sendForm("service_tvmzpu5", "template_fg5axel", this).then(function(){
+        alert("Message sent successfully!");
+      }, function(error){
+        alert("Message failed. Please try again.");
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>

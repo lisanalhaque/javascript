@@ -1,0 +1,21 @@
+🔹 Accessor Methods in JS
+
+concat() → joins two or more arrays and returns a new array
+
+includes() → checks if an array contains a certain value (returns true/false)
+
+indexOf() → returns the first index of a given element (-1 if not found)
+
+lastIndexOf() → returns the last index of a given element
+
+join() → joins all elements into a string (with a separator)
+
+slice() → extracts part of an array into a new array
+
+toString() → converts array into a comma-separated string
+
+entries() → returns an iterator with key/value pairs
+
+keys() → returns an iterator with indexes
+
+values() → returns an iterator with values
